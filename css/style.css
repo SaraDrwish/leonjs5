@@ -8,6 +8,9 @@
    -webkit-box-sizing : border-box;
    -moz-box-sizing: border-box;
 }
+:root{
+    --maincolor:#ffa500;
+}
 
 body{
     /* font-family: " work sans"  , sans-serif; */ 
@@ -47,10 +50,51 @@ body{
     width: 40px;
 }
 
-.settingcontainer{
+.settingcontainer .colorsoption{
 
 }
+.settingcontainer .colorsoption h3{
+margin:7% 4% ;
+text-transform: uppercase;
+text-align: left;
+}
+.settingcontainer .colorsoption ul{
+list-style: none;
+padding: 0;
+/* text-align: center; */
 
+}
+.settingcontainer .colorsoption ul li.act{
+opacity: 1;
+}
+.settingcontainer .colorsoption ul li{
+     display: inline-block;
+     padding: 2%;
+     margin: 1% ;
+     opacity: .5;
+     width: 22px;
+     height: 22px;
+     cursor: pointer;
+     border-radius: 50%;
+     -moz-border-radius: 50%;
+     -ms-border-radius: 50%;
+     -o-border-radius: 50%;
+     -webkit-border-radius: 50%;
+     background-color: var(--maincolor);
+}
+
+.settingcontainer .colorsoption ul li:first-child{
+    background-color: orange;
+}
+.settingcontainer .colorsoption ul li:nth-child(2){
+    background-color: #d87093;
+}
+.settingcontainer .colorsoption ul li:nth-child(3){
+    background-color: #afeeee;
+}
+.settingcontainer .colorsoption ul li:nth-child(4){
+    background-color: #7cfc00;
+}
 
 
 .landing{
@@ -108,7 +152,7 @@ font-size: 25px;
     font-weight: bold;
 }
 .header-area .nav li a.acitve , .header-area .nav li a:hover{
-    color: orange;
+    color: var(--maincolor);
 }
 .intro-text{
     position: absolute;
@@ -130,7 +174,7 @@ font-size: 25px;
     margin: 2% 1% ;
 }
 .intro-text h1 span {
-color: orange;
+color: var(--maincolor);
 }
 .intro-text p {
     font-size: 22px;

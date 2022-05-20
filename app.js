@@ -16,6 +16,25 @@ setingbox.onclick= function(){
 
 
 
+// -----------
+
+const colorslist = document.querySelectorAll(".settingcontainer .colorsoption ul li");
+
+colorslist.forEach(li =>{
+
+    li.addEventListener("click" , (e)=>{
+        //   console.log(e.target.dataset.color);
+          
+          document.documentElement.style.setProperty( '--maincolor' ,  e.target.dataset.color);
+
+    });
+
+});
+
+// -----------
+
+
+
 // -----------------
 let landing = document.querySelector(".landing");
 
