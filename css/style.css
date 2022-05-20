@@ -1,0 +1,98 @@
+/* https://www.youtube.com/watch?v=EoIxR4cq-Ew&list=PLDoPjvoNmBAzHSjcR-HnW9tnxyuye8KbF&index=2 */
+
+*{
+    margin: 0;
+    padding: 0;
+   box-sizing: border-box; 
+   -webkit-box-sizing : border-box;
+   -moz-box-sizing: border-box;
+}
+
+body{
+    /* font-family: " work sans"  , sans-serif; */ 
+    font-family: 'Open Sans', sans-serif;
+}
+
+.landing{
+    /* الساسة تاخد كلها بالطول ولو زاد يكمل  */
+    min-height: 100vh;
+    background-image: url(../img/284467.jpg);
+    background-size:cover;
+    position: relative;
+}
+
+.overlay{
+    background-color: rgba(52, 49, 49, 0.637);
+    width: 100%;
+    height:100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.header-area{
+    z-index: 2;
+    color: rgb(255, 255, 255);
+    position: relative;
+    display: flex;
+    padding: 15px;
+}
+
+.header-area .logo{
+width:20%;
+padding: 15px;
+font-weight: bold;
+font-size: 25px;
+}
+
+.header-area .nav{
+    list-style: none;
+    width: 100%;
+    padding: 15px 30px 0 ;
+    text-align: right;
+    /* padding-left: 0;
+    padding-right: 15px; */
+    font-size: 18px;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.header-area .nav li{
+    display: inline-block;
+    padding-left: 25px; 
+}
+.header-area .nav li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.header-area .nav li a.acitve , .header-area .nav li a:hover{
+    color: orange;
+}
+.intro-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%);
+    z-index:2;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.intro-text h1 {
+    font-size: 35px;
+    margin: 2% 1% ;
+}
+.intro-text h1 span {
+color: orange;
+}
+.intro-text p {
+    font-size: 22px;
+    line-height: 1.7;
+}
