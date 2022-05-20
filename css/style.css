@@ -1,4 +1,5 @@
 /* https://www.youtube.com/watch?v=EoIxR4cq-Ew&list=PLDoPjvoNmBAzHSjcR-HnW9tnxyuye8KbF&index=2 */
+/* https://www.youtube.com/watch?v=_HFognT7dnA&list=PLDoPjvoNmBAzvmpzF-6l3tAviiCPbwkB8&index=6 */
 
 *{
     margin: 0;
@@ -12,6 +13,45 @@ body{
     /* font-family: " work sans"  , sans-serif; */ 
     font-family: 'Open Sans', sans-serif;
 }
+
+.setingbox{
+    text-align: center;
+    width: 15%;
+    position: fixed;
+    top: 0;
+    left:-15%;  
+    background-color: white;
+    z-index: 100;
+    min-height: 100vh;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+.setingbox.open{
+    left:0;
+}
+
+.setingbox .togglesitting {
+    position: absolute;
+    right: -17%;
+    top: 30%;
+    background: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+.setingbox .togglesitting .geerr{
+    padding: 8px;
+    width: 40px;
+}
+
+.settingcontainer{
+
+}
+
+
 
 .landing{
     /* الساسة تاخد كلها بالطول ولو زاد يكمل  */
