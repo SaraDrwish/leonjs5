@@ -17,16 +17,35 @@ setingbox.onclick= function(){
 
 
 // -----------
+// دا جديد عشان اللوكالستورج
+let coloroptions = localStorage.getItem("coloroptions"); 
+// not tha same in html its a new elem
+if(coloroptions !== null){
+//  console.log("no color");
+document.documentElement.style.setProperty( '--maincolor' , localStorage.getItem("coloroptions") );
+// document.documentElement.style.setProperty( '--maincolor' ,coloroptions );
 
-const colorslist = document.querySelectorAll(".settingcontainer .colorsoption ul li");
-
+// عشان الدويرة تفضل بعد م نعمل ريفرش للصفحة
+ document.querySelectorAll(".boxoption li").forEach( (elm)=>{
+    elm.classList.remove("act");
+        if(elm.dataset.color === coloroptions ){
+            elm.classList.add("act");
+        }
+   });
+}
+const colorslist = document.querySelectorAll(".settingcontainer .boxoption ul li");
 colorslist.forEach(li =>{
-
     li.addEventListener("click" , (e)=>{
         //   console.log(e.target.dataset.color);
-          
           document.documentElement.style.setProperty( '--maincolor' ,  e.target.dataset.color);
+          // se color in local storg
+          localStorage.setItem("coloroptions",e.target.dataset.color);
+        //   remove active class from all chids
 
+          e.target.parentElement.querySelectorAll(".act").forEach( (elm)=>{
+              elm.classList.remove("act");
+          });
+          e.target.classList.add("act");
     });
 
 });

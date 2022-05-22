@@ -25,7 +25,9 @@ body{
     left:-15%;  
     background-color: white;
     z-index: 100;
+    /* عشان ياخد مساحة الشاشة بالطول  */
     min-height: 100vh;
+
     transition: all .3s ease;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
@@ -44,34 +46,39 @@ body{
     cursor: pointer;
     text-align: center;
 }
-
 .setingbox .togglesitting .geerr{
     padding: 8px;
     width: 40px;
 }
-
-.settingcontainer .colorsoption{
-
+.settingcontainer .boxoption{
+background-color: rgb(199, 198, 198);
+padding:4% 2%;
+margin: 6%;
+color: rgb(99, 81, 81);
 }
-.settingcontainer .colorsoption h3{
+.settingcontainer .boxoption h3{
 margin:7% 4% ;
 text-transform: uppercase;
-text-align: left;
+/* text-align: left; */
 }
-.settingcontainer .colorsoption ul{
+.settingcontainer .boxoption ul{
 list-style: none;
 padding: 0;
 /* text-align: center; */
-
 }
-.settingcontainer .colorsoption ul li.act{
-opacity: 1;
+.settingcontainer .boxoption ul li.act{
+/* opacity: 100%; */
+/* border:2px solid rgb(99, 81, 81) ; */
+border-color:rgb(99, 81, 81);
 }
-.settingcontainer .colorsoption ul li{
+.settingcontainer .boxoption ul li{
      display: inline-block;
      padding: 2%;
      margin: 1% ;
-     opacity: .5;
+
+     /* opacity: 50%; */
+     border:2px solid rgb(199, 198, 198) ;
+
      width: 22px;
      height: 22px;
      cursor: pointer;
@@ -83,19 +90,37 @@ opacity: 1;
      background-color: var(--maincolor);
 }
 
-.settingcontainer .colorsoption ul li:first-child{
+.settingcontainer .boxoption ul li:first-child{
     background-color: orange;
 }
-.settingcontainer .colorsoption ul li:nth-child(2){
+.settingcontainer .boxoption ul li:nth-child(2){
     background-color: #d87093;
 }
-.settingcontainer .colorsoption ul li:nth-child(3){
-    background-color: #afeeee;
+.settingcontainer .boxoption ul li:nth-child(3){
+    background-color: #6ea9a9;
 }
-.settingcontainer .colorsoption ul li:nth-child(4){
+.settingcontainer .boxoption ul li:nth-child(4){
     background-color: #7cfc00;
 }
 
+.settingcontainer .boxoption .yes ,.settingcontainer .boxoption .no{
+        color: white;
+        /*spanmustbedisplayinline-blc*/display: inline-block;
+        background-color: black;
+        padding: 1% 12%;
+        margin: 6% 1%;
+        cursor: pointer;
+        /* font-weight: bold; */
+        opacity: 60%;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+}
+.settingcontainer .boxoption .yes.activ{
+opacity: 100%;
+}
 
 .landing{
     /* الساسة تاخد كلها بالطول ولو زاد يكمل  */
@@ -154,6 +179,8 @@ font-size: 25px;
 .header-area .nav li a.acitve , .header-area .nav li a:hover{
     color: var(--maincolor);
 }
+
+/* ---------------------------- */
 .intro-text{
     position: absolute;
     top: 50%;
@@ -167,6 +194,8 @@ font-size: 25px;
     color: white;
     text-align: center;
     text-transform: uppercase;
+
+    width: 70%;
 }
 
 .intro-text h1 {
