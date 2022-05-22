@@ -4,6 +4,9 @@
 let geerr = document.querySelector(".togglesitting .geerr");
 let setingbox = document.querySelector(".setingbox");
 
+let bgoptions = true;
+let bginterval ;
+
 geerr.onclick = function(){
  this.classList.toggle("fa-spin");
 
@@ -67,6 +70,20 @@ randbackgr.forEach( span =>{
           });
 //add activ to target class          
           e.target.classList.add("activ");
+
+
+          if(e.target.dataset.bg === 'yes'){
+            // randomizimgs();
+                bgoptions = true;
+                randomizimgs();
+
+          }else {
+              
+                bgoptions = false;
+                clearInterval(bginterval);
+
+          }
+
     });
 });
 
@@ -75,19 +92,34 @@ randbackgr.forEach( span =>{
 
 
 // --------------
-let landing = document.querySelector(".landing");
 
-let imgArray = ["XIx9yfP.jpg","284467.jpg","wp2656336.jpg","21.jpg"];
+//must be glopal
+// let bgoptions= "ture";
+// let bginterval ;
 
-setInterval(()=>{
-   
-    for(let i =0 ; i<= imgArray.length ; i++){
-        let randomimg = Math.floor(Math.random() * imgArray.length );
-        landing.style.backgroundImage='url("img/'+ imgArray[randomimg]+'")';
-     }
- }
-,5000
+function randomizimgs(){
+
+   if(bgoptions === true){
+
+    let landing = document.querySelector(".landing");
+
+    let imgArray = ["XIx9yfP.jpg","284467.jpg","wp2656336.jpg","21.jpg"];
+
+        bginterval = setInterval(()=>{
+        
+                for(let i =0 ; i<= imgArray.length ; i++){
+                    let randomimg = Math.floor(Math.random() * imgArray.length );
+                    landing.style.backgroundImage='url("img/'+ imgArray[randomimg]+'")';
+                }
+        }
+,3000
 );
+
+   }
+
+}
+
+randomizimgs();
 
 //---------------
 
