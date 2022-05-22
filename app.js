@@ -6,17 +6,22 @@ let setingbox = document.querySelector(".setingbox");
 
 geerr.onclick = function(){
  this.classList.toggle("fa-spin");
+
+ setingbox.classList.toggle("open");
+
 //  document.querySelector(".setingbox").classList.toggle("open");
 };
 
-setingbox.onclick= function(){
-    this.classList.toggle("open");
-};
+//لو عملت دا هيفضل يعمل توجل كل م ادوس ع اي حته في الناف دا
+// setingbox.onclick= function(){
+    // this.classList.toggle("open");
+// };
+
 // ------------
 
 
 
-// -----------
+// ------------
 // دا جديد عشان اللوكالستورج
 let coloroptions = localStorage.getItem("coloroptions"); 
 // not tha same in html its a new elem
@@ -34,7 +39,7 @@ document.documentElement.style.setProperty( '--maincolor' , localStorage.getItem
    });
 }
 const colorslist = document.querySelectorAll(".settingcontainer .boxoption ul li");
-colorslist.forEach(li =>{
+ colorslist.forEach(li =>{
     li.addEventListener("click" , (e)=>{
         //   console.log(e.target.dataset.color);
           document.documentElement.style.setProperty( '--maincolor' ,  e.target.dataset.color);
@@ -50,24 +55,39 @@ colorslist.forEach(li =>{
 
 });
 
-// -----------
+//switch random bg option
+const randbackgr = document.querySelectorAll(".randbackgr span");
+//loop on all spans
+randbackgr.forEach( span =>{
+//check every span
+    span.addEventListener("click", (e)=>{
+//remove active class from all spans
+          e.target.parentElement.querySelectorAll(".activ").forEach( (el)=>{
+              el.classList.remove("activ");
+          });
+//add activ to target class          
+          e.target.classList.add("activ");
+    });
+});
+
+// -------------
 
 
 
-// -----------------
+// --------------
 let landing = document.querySelector(".landing");
 
 let imgArray = ["XIx9yfP.jpg","284467.jpg","wp2656336.jpg","21.jpg"];
 
 setInterval(()=>{
    
-for(let i =0 ; i<= imgArray.length ; i++){
-    let randomimg = Math.floor(Math.random() * imgArray.length );
-    landing.style.backgroundImage='url("img/'+ imgArray[randomimg]+'")';
-   }
-}
+    for(let i =0 ; i<= imgArray.length ; i++){
+        let randomimg = Math.floor(Math.random() * imgArray.length );
+        landing.style.backgroundImage='url("img/'+ imgArray[randomimg]+'")';
+     }
+ }
 ,5000
 );
 
-//------------------
+//---------------
 

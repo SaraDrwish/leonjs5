@@ -105,8 +105,9 @@ border-color:rgb(99, 81, 81);
 
 .settingcontainer .boxoption .yes ,.settingcontainer .boxoption .no{
         color: white;
-        /*spanmustbedisplayinline-blc*/display: inline-block;
-        background-color: black;
+        /*spanmustbedisplayinline-blc*/
+        display: inline-block;
+        /* background-color: black; */
         padding: 1% 12%;
         margin: 6% 1%;
         cursor: pointer;
@@ -117,8 +118,9 @@ border-color:rgb(99, 81, 81);
         -moz-border-radius: 8px;
         -ms-border-radius: 8px;
         -o-border-radius: 8px;
+        background-color: #376969;
 }
-.settingcontainer .boxoption .yes.activ{
+.settingcontainer .boxoption .activ{
 opacity: 100%;
 }
 
