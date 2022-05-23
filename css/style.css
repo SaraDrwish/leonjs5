@@ -17,17 +17,21 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+.container{
+    margin: auto;
+    width: 95%;
+    padding: 0 1%;
+}
+
 .setingbox{
     text-align: center;
     width: 15%;
     position: fixed;
     top: 0;
-    left:-15%;  
+    left:-15%;
     background-color: white;
     z-index: 100;
-    /* عشان ياخد مساحة الشاشة بالطول  */
-    min-height: 100vh;
-
+    /*عشانياخدمساحةالشاشةبالطول*/min-height: 100vh;
     transition: all .3s ease;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
@@ -210,4 +214,45 @@ color: var(--maincolor);
 .intro-text p {
     font-size: 22px;
     line-height: 1.7;
+}
+
+
+/* ----------------------------------------------- */
+
+
+.aboutus{
+display: flex;
+margin: 4% 0;
+}
+
+.aboutus .infoboxabout{
+flex: 1;
+padding: 3% 4%;
+
+}
+.aboutus .infoboxabout h3{
+font-size: 33px;
+font-weight: bold;
+color: var(--maincolor);
+text-transform: capitalize;
+
+}
+.aboutus .infoboxabout p{
+font-size: 20px;
+color: #376969;
+line-height: 2;
+}
+
+.aboutus .imgboxabout{
+    flex: 1;
+    text-align: center;
+}
+.aboutus .imgboxabout img{
+   width: 45%;
+   height: 85%;
+   border-radius:40% ;
+   -webkit-border-radius:40% ;
+   -moz-border-radius:40% ;
+   -ms-border-radius:40% ;
+   -o-border-radius:40% ;
 }
