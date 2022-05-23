@@ -4,8 +4,7 @@
 let geerr = document.querySelector(".togglesitting .geerr");
 let setingbox = document.querySelector(".setingbox");
 
-let bgoptions = true;
-let bginterval ;
+
 
 geerr.onclick = function(){
  this.classList.toggle("fa-spin");
@@ -25,6 +24,39 @@ geerr.onclick = function(){
 
 
 // ------------
+
+let bgoptions = true;
+let bginterval ;
+
+//check if there is local storge random item
+
+let bglocalitemoptions = localStorage.getItem("bglocalitemoptions");
+
+    if(bglocalitemoptions !== null){
+
+      //لان القيمة الي بتطلع استرنج فعشان نحولها لازم نعمل شرط تاني
+        //   console.log(bglocalitemoptions);
+        //   console.log(typeof(bglocalitemoptions));
+
+          if(bglocalitemoptions === "true"){
+            bgoptions = true ;
+          }else{
+            bgoptions = false ;
+          }
+
+          document.querySelectorAll(".randbackgr span").forEach(el=>{
+             el.classList.remove("activ");
+           
+        });
+
+        if(bglocalitemoptions === "true"){
+            document.querySelector(".randbackgr .yes").classList.add("activ");
+        }else{
+            document.querySelector(".randbackgr .no").classList.add("activ");
+        }
+
+    } 
+
 // دا جديد عشان اللوكالستورج
 let coloroptions = localStorage.getItem("coloroptions"); 
 // not tha same in html its a new elem
@@ -71,18 +103,19 @@ randbackgr.forEach( span =>{
 //add activ to target class          
           e.target.classList.add("activ");
 
+            if(e.target.dataset.bg === 'yes'){
+                // randomizimgs();
+                    bgoptions = true;
+                    randomizimgs();
+                    localStorage.setItem("bglocalitemoptions" , true);
 
-          if(e.target.dataset.bg === 'yes'){
-            // randomizimgs();
-                bgoptions = true;
-                randomizimgs();
+            }else {
+                
+                    bgoptions = false;
+                    clearInterval(bginterval);
+                    localStorage.setItem("bglocalitemoptions" , false);
 
-          }else {
-              
-                bgoptions = false;
-                clearInterval(bginterval);
-
-          }
+            }
 
     });
 });
