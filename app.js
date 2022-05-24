@@ -156,3 +156,34 @@ randomizimgs();
 
 //---------------
 
+
+
+// ----------------------
+
+let skills = document.querySelector(".skills");
+
+window.onscroll = function(){
+
+    let skilloffsettop = skills.offsetTop;
+
+    let skilloffsethight = skills.offsetHeight;
+
+    let windowhight = this.innerHeight;
+
+    let windoscrolltop = this.pageYOffset;
+
+    console.log(windowhight , skilloffsethight , skilloffsettop);
+
+
+        if( windoscrolltop > ( ( skilloffsettop + skilloffsethight ) - windowhight ) ){
+            
+              let allskills = document.querySelectorAll(".skillsbox .skillprogg span").forEach( skillspan =>{
+
+                skillspan.style.width = skillspan.dataset.prog;
+                
+            });
+            
+        }
+
+
+}

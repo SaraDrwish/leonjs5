@@ -217,7 +217,7 @@ color: var(--maincolor);
 }
 
 
-/* ----------------------------------------------- */
+/* ------------------------about----------------------- */
 
 
 .aboutus{
@@ -235,12 +235,12 @@ font-size: 33px;
 font-weight: bold;
 color: var(--maincolor);
 text-transform: capitalize;
-
+padding: 0 0 3% 0;
 }
 .aboutus .infoboxabout p{
 font-size: 20px;
 color: #376969;
-line-height: 2;
+line-height: 1.5;
 }
 
 .aboutus .imgboxabout{
@@ -256,3 +256,108 @@ line-height: 2;
    -ms-border-radius:40% ;
    -o-border-radius:40% ;
 }
+
+/* ---------------------skills------------- */
+
+.skills{
+    margin: 4% 0;
+    padding: 4% ;
+    text-align: center;
+    background-color: rgba(246, 246, 246, 0.88);
+}
+.skills h3{
+    text-align: center;
+    font-size: 33px;
+    font-weight: bold;
+    color: var(--maincolor);
+    padding: 0 0 2% 0;
+    text-transform: capitalize;
+}
+.skills .skillsbox{
+    margin: 2% 0;
+    display: flex;
+    width: 100%;
+    /* height: 30px;  */
+    background-color: white;
+    padding: 1%;
+}
+.skills .skillsbox .skiltitle{
+    color: var(--maincolor);
+    font-weight: bold;
+    /* line-height: 35px; */
+    font-size: 19px;
+    width: 10%;
+    text-align: center;
+    padding: 0 2%;
+}
+.skills .skillsbox .skillprogg{
+    width: 100%;
+    height:30px;
+    background-color: #d8dcdc;
+    position:relative;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    overflow: hidden;
+}
+.skills .skillsbox .skillprogg span{
+       position: absolute;
+       top: 0;
+       left: 0;
+       /*width: 30%;
+       */width:0;
+       height:100%;
+       background-color: var(--maincolor);
+       border-radius: 8px;
+       -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+       -ms-border-radius: 8px;
+       -o-border-radius: 8px;
+       transition:all .8s ease ;
+       -webkit-transition:all .8s ease ;
+       -moz-transition:all .8s ease ;
+       -ms-transition:all .8s ease ;
+       -o-transition:all .8s ease ;
+}
+
+
+
+/* ------------------------------------- */
+
+
+/* --------------gallary------------- */
+
+.gallary{
+    padding: 2%;
+}
+.gallary h3{
+    text-align: center;
+    font-size: 33px;
+    font-weight: bold;
+    color: var(--maincolor);
+    padding: 0 0 2% 0;
+    text-transform: capitalize;
+}
+.gallary .imgs-box-gal{
+    width: 80%;
+    margin: 2% auto;
+    text-align: center;
+}
+
+.gallary .imgs-box-gal img{
+    width: 300px;
+    height: 200px;
+    border: 4px solid var(--maincolor);  
+    cursor: pointer;
+    margin: 0.5%;
+
+}
+
+/* -------------------------------- */
+
+
+
+
+
