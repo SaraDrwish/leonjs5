@@ -352,8 +352,63 @@ line-height: 1.5;
     border: 4px solid var(--maincolor);  
     cursor: pointer;
     margin: 0.5%;
-
 }
+
+.pop-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:#0000006a;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+}
+.pop-img-box{
+    z-index: 10001;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    -webkit-transform: translate(-50% ,-50%);
+    -moz-transform: translate(-50% ,-50%);
+    -ms-transform: translate(-50% ,-50%);
+    -o-transform: translate(-50% ,-50%);
+    /* padding: 1%; */
+    border: 4px solid var(--maincolor);
+    background-color: white;
+}
+.pop-img-box h3{
+    color: var(--maincolor);
+    font-size: 22px;
+    padding: 1%;
+    text-decoration: underline;
+}
+.pop-img-box img {
+    /* عشان متطلعش برا نحط ماكس */
+    /* max-width: 100%; */
+    width: 100%;
+    height: 100%;
+}
+
+.closebtn{
+    cursor: pointer;
+    font-weight: bolder;
+    color: red;
+    position: fixed;
+    right: 1%;
+    top: 1%;
+    margin: 2px 0;
+    font-size: 19px;
+    padding: 1px 8px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 2px solid var(--maincolor);
+}
+
 
 /* -------------------------------- */
 

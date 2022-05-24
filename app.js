@@ -187,3 +187,61 @@ window.onscroll = function(){
 
 
 }
+
+
+
+// ------------------------------
+
+
+let gallimg = document.querySelectorAll(".gallary  img");
+
+gallimg.forEach( img =>{
+
+    img.addEventListener("click" , (e) => {
+
+        // creat pupap overlay
+        let popoverly = document.createElement("div");
+        popoverly.className = "pop-overlay" ;
+        document.body.appendChild(popoverly);
+
+        let popimgbox = document.createElement("div");
+        popimgbox.className = "pop-img-box";
+
+       if( img.alt !== null){
+
+            let imgtitle = document.createElement("h3");
+
+            let imgtext = document.createTextNode(img.alt);
+
+            imgtitle.appendChild(imgtext);
+
+            popimgbox.appendChild(imgtitle);
+
+          }
+
+        let popimg = document.createElement("img");
+
+        popimg.src = img.src;
+
+        popimgbox.appendChild(popimg);
+
+        document.body.appendChild(popimgbox);
+
+        let closepotn = document.createElement("span");
+        closepotn.className = "closebtn";
+        let textclosebtn = document.createTextNode("X");
+        closepotn.appendChild(textclosebtn);
+        popimgbox.appendChild(closepotn);
+
+
+
+
+
+
+    });
+
+
+});
+
+
+
