@@ -233,15 +233,21 @@ gallimg.forEach( img =>{
         closepotn.appendChild(textclosebtn);
         popimgbox.appendChild(closepotn);
 
-
-
-
-
-
     });
 
 
 });
 
+
+document.addEventListener("click", function(e){
+    
+    if(e.target.className == "closebtn"){
+        e.target.parentNode.remove();
+
+        document.querySelector(".pop-overlay").remove();
+
+    }
+
+});
 
 
