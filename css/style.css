@@ -116,13 +116,14 @@ border-color:rgb(99, 81, 81);
         margin: 6% 1%;
         cursor: pointer;
         /* font-weight: bold; */
-        opacity: 60%;
+        opacity: 50%;
         border-radius: 8px;
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
         -ms-border-radius: 8px;
         -o-border-radius: 8px;
-        background-color: #376969;
+        /* background-color: #376969; */
+        background-color: var(--maincolor);
 }
 .settingcontainer .boxoption .activ{
 opacity: 100%;
