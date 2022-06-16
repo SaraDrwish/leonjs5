@@ -649,15 +649,119 @@ margin: 6% auto;
 
 
 .testimon{
-    /* margin: 11% auto; */
+margin: 2% auto;
+margin-bottom: 0 !important;
+min-height: 100vh;
+position: relative;
+z-index: 3;
 }
+.testimon h3 {
+font-size: 33px;
+font-weight: bold;
+color:white;
+text-transform: capitalize;
+padding: 0 0 3% 0;
+ position: absolute;
+text-align: center;
+/* z-index: 4; */
 
+}
+.testimon::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0%;
+    background-color: rgb(41, 40, 40);
+    width: 50%;
+    height: 100%;
+ }
+ .testimon::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0%;
+    background-color: var(--maincolor);
+    width: 50%;
+    height: 100%;
+ }
+ .testimon .tes-contain-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* z-index: 4; */
+    margin: 6%;
+    padding:2%;
+
+ }
+ .testimon .tes-box{
+background-color: white;
+padding:2%;
+margin: 4% 1%;
+/* width: calc(100% - 70%); */
+width: calc(88% / 3);
+/* position: absolute; */
+z-index: 4;
+display: flex;
+align-items:center;
+justify-content:center;
+flex-direction: column;
+/* flex-wrap: nowrap; */
+ }
+ .testimon .tes-box .tes-img-box img {
+    margin: 4% 2%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    flex-basis: 1;
+    /* width: 10%; */
+    display: flex;
+    /* text-align: left;
+    align-items:flex-start;
+    justify-content:left; */
+
+}
+.testimon .tes-box .tes-img-box .per-info{
+display: flex;
+flex-direction: column;
+/* justify-content:flex-end;
+align-items:flex-end;
+ */
+/* text-align: right; */
+/* width: 60%; */
+flex-basis: 2;
+}
+ .testimon .tes-box .tes-img-box > h4 {
+font-weight: bolder;
+text-transform: uppercase;
+padding: 1% ;
+/* flex-basis: 1; */
+/* text-align: right; */
+ }
+ /* .testimon .tes-box .tes-img-box + p {
+    width: 100%;
+    display: inline-block;
+ } */
+ .testimon .tes-box .tes-img-box > p {
+    width: 40%;
+    padding: 2% 1% ;
+    color: darkgray;
+    /* flex-basis: 2; */
+    /* display: flex; */
+font-size: 11px;
+/* text-align: right; */
+}
 
 
 
 /* ------------------------------------ */
 
 .contact{
+    margin-top: 0% !important;
+
     /* min-height: 200vh; */
     background-image: url(../img/mpgr.jpg);
     background-size: cover;
