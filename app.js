@@ -305,3 +305,54 @@ function handelAcriv(ev){
 
 // ----------------------------------------------------------------------------------
 
+let bulletSpans = document.querySelectorAll(".bulletsoptions span");
+let navbullets = document.querySelector(".nav-bullets");
+let bulletsOptionsStorg = localStorage.getItem("bulletsOptionsStorg");
+
+if(bulletsOptionsStorg !== null){
+    bulletSpans.forEach(span =>{
+        span.classList.remove("activ");
+    });
+    if(bulletsOptionsStorg === 'none'){
+        navbullets.style.display="none";
+        document.querySelector(".bulletsoptions .no").classList.add("activ");
+    }else{
+        navbullets.style.display = "block";
+        document.querySelector(".bulletsoptions .yes").classList.add("activ");
+    }
+}
+
+   bulletSpans.forEach(spa =>{
+
+        spa.addEventListener("click" , (el) => {
+
+            if(spa.dataset.options === "hide"){
+                navbullets.style.display="none";
+                localStorage.setItem("bulletsOptionsStorg" , 'none');
+            }else{
+                navbullets.style.display = "block";
+                localStorage.setItem("bulletsOptionsStorg" , 'block');
+            }
+
+            handelAcriv(el);
+
+        });
+  
+   });
+
+//    ----------------------------------------------------------------------------
+
+let resetOptions = document.querySelector(".reset-site-options");
+
+resetOptions.onclick = function(){
+
+    // localStorage.clear();
+    localStorage.removeItem("bglocalitemoptions");
+    localStorage.removeItem("coloroptions");
+    localStorage.removeItem("bulletsOptionsStorg");
+
+    window.location.reload();
+
+};
+
+// --------------------------------------------------------------------------------

@@ -105,29 +105,47 @@ border-color:rgb(99, 81, 81);
     background-color: #6ea9a9;
 }
 .settingcontainer .boxoption ul li:nth-child(4){
-    background-color: #7cfc00;
+    background-color: #98af81;
+}
+.settingcontainer .boxoption ul li:nth-child(5){
+    background-color: #7d6081 ;
 }
 
 .settingcontainer .boxoption .yes ,.settingcontainer .boxoption .no{
         color: white;
-        /*spanmustbedisplayinline-blc*/
-        display: inline-block;
-        /* background-color: black; */
-        padding: 1% 12%;
+        /*spanmustbedisplayinline-blc*/display: inline-block;
+        /*background-color: black;
+        */padding: 1% 12%;
         margin: 6% 1%;
         cursor: pointer;
-        /* font-weight: bold; */
-        opacity: 50%;
+        /*font-weight: bold;
+        */opacity: 50%;
         border-radius: 8px;
-        -webkit-border-radius: 8px;
-        -moz-border-radius: 8px;
-        -ms-border-radius: 8px;
-        -o-border-radius: 8px;
-        /* background-color: #376969; */
-        background-color: var(--maincolor);
+        -webkit-border-radius:;
+        -moz-border-radius:;
+        -ms-border-radius:;
+        -o-border-radius:;
+        /*background-color: #376969;
+        */background-color: var(--maincolor);
 }
 .settingcontainer .boxoption .activ{
 opacity: 100%;
+}
+
+.redPotn{
+    background-color:rgb(199, 198, 198);
+    color: red;
+    font-size: 22px;
+    border-radius: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+    padding: 4% 9%;
+    margin: 2%;
+    cursor: pointer;
+    border: none;
+    font-weight: bolder;
 }
 
 .landing{
