@@ -86,6 +86,8 @@ const colorslist = document.querySelectorAll(".settingcontainer .boxoption ul li
               elm.classList.remove("act");
           });
           e.target.classList.add("act");
+
+
     });
 
 });
@@ -96,13 +98,13 @@ const randbackgr = document.querySelectorAll(".randbackgr span");
 randbackgr.forEach( span =>{
 //check every span
     span.addEventListener("click", (e)=>{
-//remove active class from all spans
-          e.target.parentElement.querySelectorAll(".activ").forEach( (el)=>{
-              el.classList.remove("activ");
-          });
-//add activ to target class          
-          e.target.classList.add("activ");
-
+            //remove active class from all spans
+//           e.target.parentElement.querySelectorAll(".activ").forEach( (el)=>{
+//               el.classList.remove("activ");
+//           });
+//          //add activ to target class          
+//           e.target.classList.add("activ");
+            handelAcriv(e);
             if(e.target.dataset.bg === 'yes'){
                 // randomizimgs();
                     bgoptions = true;
@@ -189,7 +191,6 @@ window.onscroll = function(){
 }
 
 
-
 // ------------------------------
 
 
@@ -235,9 +236,7 @@ gallimg.forEach( img =>{
 
     });
 
-
 });
-
 
 document.addEventListener("click", function(e){
     
@@ -250,4 +249,59 @@ document.addEventListener("click", function(e){
 
 });
 
+
+// ----------------------------------------------------------------------bullets
+const bullets = document.querySelectorAll(".nav-bullets .bullets");
+//     bullets.forEach( bul=>{
+//          bul.addEventListener( "click" , (e) =>{
+//             // console.log(e.target.dataset.section);
+//             document.querySelector(e.target.dataset.section).scrollIntoView({
+//                 behavior: "smooth"
+//             });
+//          });
+//     } );
+// // ---------------------------------------------------------------------------------
+const links = document.querySelectorAll(".header-area .nav  a ");
+//      links.forEach( nv=>{
+//          nv.addEventListener( "click" , (e) =>{
+//             // console.log(e.target.dataset.section);
+//             e.preventDefault();
+//             document.querySelector(e.target.dataset.section).scrollIntoView({
+//                 behavior: "smooth"
+//             });
+
+//          });
+
+//     } );
+// // ----------------------------------------------------------------------------------
+function scrollFunctionsInSite(elements){
+    elements.forEach( el=>{
+        el.addEventListener( "click" , (e) =>{
+           // console.log(e.target.dataset.section);
+           e.preventDefault();
+           document.querySelector(e.target.dataset.section).scrollIntoView({
+               behavior: "smooth"
+           });
+        });
+   } );
+
+}
+
+ scrollFunctionsInSite(bullets);
+ scrollFunctionsInSite(links);
+
+// --------------------------------------------------------------------------------------
+
+
+//handel ac]tive state 
+
+function handelAcriv(ev){
+  ev.target.parentElement.querySelectorAll(".activ").forEach(elem =>{
+    elem.classList.remove("activ");
+  });
+  ev.target.classList.add("activ");
+
+}
+
+// ----------------------------------------------------------------------------------
 

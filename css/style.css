@@ -37,6 +37,7 @@ body{
     -moz-transition: all .3s ease;
     -ms-transition: all .3s ease;
     -o-transition: all .3s ease;
+    border: 1px solid var(--maincolor);
 }
 .setingbox.open{
     left:0;
@@ -186,7 +187,80 @@ font-size: 25px;
 .header-area .nav li a.acitve , .header-area .nav li a:hover{
     color: var(--maincolor);
 }
+/* bullets */
+/* ------------------------------ */
 
+.nav-bullets{
+        position: fixed;
+        top:50%;
+        right:1%;
+        transform:translate(-50%) ;
+        -webkit-transform:translate(-50%) ;
+        -moz-transform:translate(-50%) ;
+        -ms-transform:translate(-50%) ;
+        -o-transform:translate(-50%) ;
+        z-index: 111;
+}
+.nav-bullets .bullets{
+ width: 20px;
+ height: 20px;
+ border:3px solid var(--maincolor);
+ padding: 1%;
+ margin: 25% 0;
+ border-radius: 50%;
+ cursor: pointer;
+ transition:all .4s ease-in ;
+ -webkit-transition:all .4s ease-in ;
+ -moz-transition:all .4s ease-in ;
+ -ms-transition:all .4s ease-in ;
+ -o-transition:all .4s ease-in ;
+ position: relative;
+ text-transform: capitalize;
+}
+.nav-bullets .bullets:hover{
+    background-color: var(--maincolor);
+    opacity: 90%;
+}
+.bulletActiv{
+    background-color: var(--maincolor);
+}
+.nav-bullets .tooltip{
+    position: absolute;
+    right:30px;
+    top:-5px;
+    width:75px;
+    /* height:30px; */
+    color:white;
+    background-color: var(--maincolor);
+    text-align: center;
+    pointer-events: none;
+    display: none;
+}
+.nav-bullets  .bullets:hover .tooltip {
+    display: block;
+}
+.nav-bullets .tooltip::after{
+    content: '';
+    position: absolute;
+    top:50%;
+    /* top:20px; */
+    left:98%;
+    transform:translateY(-50%) ;
+    margin: 0px;
+    z-index: 4;
+    border-color: transparent transparent transparent var(--maincolor);
+    border-width:8px;
+    border-style: solid;
+    width:0;
+    height: 0;
+    -webkit-transform:translateY(-50%) ;
+    -moz-transform:translateY(-50%) ;
+    -ms-transform:translateY(-50%) ;
+    -o-transform:translateY(-50%) ;
+}
+
+
+/* ---------------------------- */
 /* ---------------------------- */
 .intro-text{
     position: absolute;
@@ -201,7 +275,6 @@ font-size: 25px;
     color: white;
     text-align: center;
     text-transform: uppercase;
-
     width: 70%;
 }
 
@@ -789,7 +862,19 @@ padding: 2% 1% ;
     width: 60%;
 }
 
+/* -------------------------------------- */
 
+/* ----------------------------------------- */
+
+
+
+
+
+
+
+
+
+/* --------------------------------------- */
 
 
 /* ------------------------------------ */
