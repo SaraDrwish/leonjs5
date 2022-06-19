@@ -356,3 +356,42 @@ resetOptions.onclick = function(){
 };
 
 // --------------------------------------------------------------------------------
+
+// -------------------------------------------------------------------------------
+
+
+let navLinks = document.querySelector(".nav");
+let togglMenu = document.querySelector(".toggle-menu");
+
+togglMenu.onclick = function(e){
+
+    e.stopPropagation();
+    this.classList.toggle("menu-active");
+    navLinks.classList.toggle("open");
+
+}
+
+document.addEventListener("click" , e=>{
+
+    if( e.target !== navLinks && e.target !== togglMenu){
+
+        if(navLinks.classList.contains("open")){
+    
+            togglMenu.classList.toggle("menu-active");
+            navLinks.classList.toggle("open");
+        }
+    
+    }
+
+});
+
+
+navLinks.onclick = function(e){
+    e.stopPropagation();
+}
+
+
+
+
+
+// --------------------------------------------------------------------------------

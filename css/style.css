@@ -45,7 +45,8 @@ body{
 
 .setingbox .togglesitting {
     position: absolute;
-    right: -17%;
+    /* right: -17%; */
+    right: -38px;
     top: 30%;
     background: white;
     cursor: pointer;
@@ -121,10 +122,10 @@ border-color:rgb(99, 81, 81);
         /*font-weight: bold;
         */opacity: 50%;
         border-radius: 8px;
-        -webkit-border-radius:;
-        -moz-border-radius:;
-        -ms-border-radius:;
-        -o-border-radius:;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
         /*background-color: #376969;
         */background-color: var(--maincolor);
 }
@@ -165,6 +166,10 @@ opacity: 100%;
     top: 0;
     z-index: 1;
 }
+.header-area .container , .intro-text .container{
+    position: relative;
+    z-index:1000;
+}
 
 .header-area{
     z-index: 2;
@@ -175,10 +180,10 @@ opacity: 100%;
 }
 
 .header-area .logo{
-width:20%;
+width:33%;
 padding: 15px;
 font-weight: bold;
-font-size: 25px;
+font-size: 20px;
 }
 
 .header-area .nav{
@@ -193,6 +198,37 @@ font-size: 25px;
     text-transform: capitalize;
 }
 
+.header-area .nav.open{
+    background-color:white;
+    padding: 1%;
+    display: block;
+    position: absolute;
+    /* top: 74%;
+    right: 2%; */
+    top: 66px;
+    right: 17px;
+    width: 95%;
+    border-radius: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+    font-size: 14px;
+    text-align: left;
+}
+.header-area .nav.open li a{
+    color: rgb(20, 13, 13);
+    /* font-size: 14px; */
+}
+.header-area .nav.open li:hover{
+  background-color: rgba(240, 240, 240, 0.736);
+}
+.header-area .nav.open li{
+    display: block ;
+    margin: 8px;
+    padding: 0px;
+}
+
 .header-area .nav li{
     display: inline-block;
     padding-left: 25px; 
@@ -202,9 +238,61 @@ font-size: 25px;
     text-decoration: none;
     font-weight: bold;
 }
+
 .header-area .nav li a.acitve , .header-area .nav li a:hover{
     color: var(--maincolor);
 }
+.header-area .ul-nav-links{
+    width: 100%;
+    text-align: right;
+}
+.header-area .toggle-menu{
+    background: none;
+    border: none;
+    width: 30px;
+    cursor: pointer;
+    display: none;
+    margin-top: 3%;
+}
+.header-area .toggle-menu.menu-active::after{
+ content: "";
+ position: absolute;
+ top: 48px;
+ right: 20px;
+ border-width: 11px;
+ border-style: solid;
+ border-color: transparent transparent white transparent;
+}
+.header-area .toggle-menu span{
+display: block;
+height: 3px;
+background-color: var(--maincolor);
+margin: 16% 0; 
+}
+
+/* tablets and mobiles  */
+@media (max-width:991px) {
+    
+    .header-area .nav{
+        display: none;
+    }
+    .header-area .toggle-menu{
+        display: inline-block;
+    }
+
+   
+    /* .intro-text h1 {
+        font-size: 20px;
+     }
+    .intro-text p {
+        font-size: 14px;
+     } */
+
+
+
+}
+
+
 /* bullets */
 /* ------------------------------ */
 
@@ -294,14 +382,17 @@ font-size: 25px;
     text-align: center;
     text-transform: uppercase;
     width: 70%;
+    
 }
 
 .intro-text h1 {
     font-size: 35px;
     margin: 2% 1% ;
 }
-.intro-text h1 span {
+.intro-text .goodspan {
 color: var(--maincolor);
+display: inline-block;
+/* z-index: -1111; */
 }
 .intro-text p {
     font-size: 22px;
@@ -1032,3 +1123,44 @@ footer p a:hover{
 
 
  /* ------------------------------------- */
+
+
+
+ /* Media : grid system -------------------------------------------------------------------------------------------------------*/
+
+
+
+/* small devs : mobiles */
+
+ @media (min-width : 576px) {  
+    .container {
+        max-width: 540px;
+    }
+ }
+
+
+ /* med devs : tablets  */
+ @media (min-width : 768px) {
+    .container {
+        max-width: 720px;
+    }
+ }
+ 
+
+  /*     : PCs  */
+  @media (min-width : 992px) {
+    .container {
+        max-width: 960px;
+    }
+ }
+
+
+  /* larg devs :    */
+  @media (min-width : 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+ }
+
+
+ /* ----------------------------------------------------------------------------------------------------------------------------- */
