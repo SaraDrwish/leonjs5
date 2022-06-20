@@ -51,7 +51,6 @@ body{
     background: white;
     cursor: pointer;
     text-align: center;
-
 }
 .setingbox .togglesitting .geerr{
     padding: 8px;
@@ -70,7 +69,7 @@ margin:7% 4% ;
 padding:2% 1%;
 text-transform: uppercase;
 /* text-align: left; */
-font-size: 0.8em;
+font-size: 0.9em;
 }
 .settingcontainer .boxoption ul{
 list-style: none;
@@ -99,11 +98,24 @@ border-color:rgb(99, 81, 81);
      background-color: var(--maincolor);
 }
 
+@media (max-width:991px) {
+
+    .setingbox{
+         width: 38%;
+         left:-38%;
+        }
+  
+    /* .settingcontainer .boxoption ul li{
+        width: 15px;
+    } */
+
+}
+
 .redPotn{
     background-color:rgb(199, 198, 198);
     color: red;
     /* font-size: 16px; */
-    font-size: 0.8em;
+    font-size: 0.9em;
     border-radius: 9px;
     -webkit-border-radius: 9px;
     -moz-border-radius: 9px;
